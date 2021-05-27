@@ -11,17 +11,17 @@ public class Server_DB_Connect {
 		Connection conn = null;
 		try {
 			String user = "tetrisDB";
-			String passwd = "cks14579";
+			String passwd = "tetris";
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(url, user, passwd); //µğºñ¿¬µ¿ ¿Ï·á.
+			conn = DriverManager.getConnection(url, user, passwd); //ë””ë¹„ì—°ë™ ì™„ë£Œ.
 			
-			System.out.println("===== DB ¿¬µ¿ ¼º°ø =====");
+			System.out.println("===== DB ì—°ë™ ì„±ê³µ =====");
 		} catch (ClassNotFoundException cnfe) {
-			System.err.println("DB µå¶óÀÌ¹ö ·Îµù ½ÇÆĞ :" + cnfe.toString());
+			System.err.println("DB ë“œë¼ì´ë²„ ë¡œë”© ì‹¤íŒ¨ :" + cnfe.toString());
 		} catch (SQLException sqle) {
-			System.err.println("DB Á¢¼Ó ½ÇÆĞ :" + sqle.toString());
+			System.err.println("DB ì ‘ì† ì‹¤íŒ¨ :" + sqle.toString());
 		} catch (Exception e) {
 			System.err.println("Unknown error!");
 			e.printStackTrace();
